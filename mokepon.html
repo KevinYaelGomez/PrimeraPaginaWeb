@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/mokepon.js"></script>
+    <title>Mopékom</title>
+</head>
+<body>
+    <h1>Mopékom 🔥🍃💧</h1>
+     
+    <!--Seleccion del Mopékom-->
+    <section id="mascotas">
+        <h2>Elige tu Mopékom: </h2>
+
+        <label for="llamarizard">Llamarizard 🔥</label>
+            <input type="radio" name="mopekom" id="llamarizard"/>
+
+        <label for="floresaur">Floresaur 🍃</label>
+            <input type="radio" name="mopekom" id="floresaur"/>
+
+        <label for="tortoise">Tortoise 💧</label>
+            <input type="radio" name="mopekom" id="tortoise"/>
+
+            <button id="boton-mascotas">Selecionar</button>
+    </section>
+    
+    <!--Seleccion del ataque-->
+    <section id="ataque">
+        <p>Tu Moképom <span id="mokeponJugador"></span> tiene <span>3</span> vidas</p>
+        <p>El Moképom <span id="mokeponRival"></span> del rival tiene <span>3</span> vidas</p>
+
+        <h2>Elige tu ataque: </h2>
+        <p>
+            <button id="boton-fuego">Fuego 🔥</button>
+            <button id="boton-agua">Agua 💧</button>
+            <button id="boton-planta">Planta 🍃</button>
+        </p>
+    </section>
+
+    <section id="mensajes"></section>
+
+    <section id="reiniciar">
+        <button id="boton-reinicio">¿Volver a jugar?</button>
+    </section>
+
+
+</body>
+</html>
