@@ -1,7 +1,17 @@
+let ataqueJugador 
+let ataqueEnemigo
+
 function iniciarJuego(){
     let botonMascotaJugador = document.getElementById("boton-mascotas")
     botonMascotaJugador.addEventListener("click", selecionarMascotaJugador)
        
+    let botonFuego = document.getElementById("boton-fuego")
+    botonFuego.addEventListener('click', ataqueFuego)
+    let botonAgua = document.getElementById("boton-agua")
+    botonAgua.addEventListener('click', ataqueAgua)
+    let botonTierra = document.getElementById("boton-planta")
+    botonTierra.addEventListener('click', ataqueTierra)
+
 }
 
 //Selecion del usuario
@@ -13,7 +23,7 @@ function selecionarMascotaJugador() {
 
 
     if (inputllamarizard.checked){
-        alert("Selecionasta a Llamarizard")
+        alert("Selecionaste a Llamarizard")
             spanmokeponJugador.innerHTML = 'Llamarizar'
     }   else if (inputfloresaur.checked){
             alert("Seleccionaste a Floresaur")
@@ -30,16 +40,49 @@ function selecionarMascotaJugador() {
 
 //Selecion de la maquina
 function selecionarMascotaEnemigo(){
-    let ataqueAleatorio = aleatorio(1,3)
+    let mokeponAleatorio = aleatorio(1,3)
     let spanmokeponRival = document.getElementById('mokeponRival')
     
-    if (ataqueAleatorio == 1){
+    if (mokeponAleatorio == 1){
         spanmokeponRival.innerHTML = 'Llamarizard'
-    } else if (ataqueAleatorio == 2){
+    } else if (mokeponAleatorio == 2){
         spanmokeponRival.innerHTML = 'Floresaur'
-    } else if (ataqueAleatorio == 3){
+    } else if (mokeponAleatorio == 3){
         spanmokeponRival.innerHTML = 'Tortoise'
     }
+}
+
+function ataqueFuego(){
+    ataqueJugador = "Fuego"
+    ataqueAleatorioEnemigo()
+}
+
+function ataqueAgua(){
+    ataqueJugador = "Agua"
+    ataqueAleatorioEnemigo()
+}
+
+function ataquePlanta(){
+    ataqueJugador = "Planta"
+    ataqueAleatorioEnemigo()
+}
+
+function ataqueAleatorioEnemigo(){
+    let ataqueAleatorio = aleatorio(1,3)
+    if(ataqueAleatorio == 1){
+        ataqueEnemigo = "Fuego"
+    }   else if(ataqueAleatorio == 2){
+            ataqueEnemigo = "Agua"
+    }   else {
+            ataqueEnemigo = "Planta"
+    }
+    
+    crearMensaje()
+}
+
+function crearMensaje(){
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = 'Tu Moképon ataco con ' + ataqueJugador + ', el Moképon del enemigo uso ' + ataqueEnemigo +  '- Ganaste 🎉'
 }
 
 function aleatorio(min, max){
