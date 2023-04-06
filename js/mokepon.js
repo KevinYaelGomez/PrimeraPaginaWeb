@@ -9,8 +9,8 @@ function iniciarJuego(){
     botonFuego.addEventListener('click', ataqueFuego)
     let botonAgua = document.getElementById("boton-agua")
     botonAgua.addEventListener('click', ataqueAgua)
-    let botonTierra = document.getElementById("boton-planta")
-    botonTierra.addEventListener('click', ataqueTierra)
+    let botonPlanta = document.getElementById("boton-planta")
+    botonPlanta.addEventListener('click', ataquePlanta)
 
 }
 
@@ -52,6 +52,7 @@ function selecionarMascotaEnemigo(){
     }
 }
 
+//Se define el ataque del jugador
 function ataqueFuego(){
     ataqueJugador = "Fuego"
     ataqueAleatorioEnemigo()
@@ -67,6 +68,7 @@ function ataquePlanta(){
     ataqueAleatorioEnemigo()
 }
 
+//Selecion del ataque maquina
 function ataqueAleatorioEnemigo(){
     let ataqueAleatorio = aleatorio(1,3)
     if(ataqueAleatorio == 1){
@@ -77,12 +79,32 @@ function ataqueAleatorioEnemigo(){
             ataqueEnemigo = "Planta"
     }
     
-    crearMensaje()
+    combate()
 }
 
-function crearMensaje(){
+//logica de combate
+function combate(){
+    if(ataqueEnemigo == ataqueJugador){
+        crearMensaje("Empate")
+    } else if(ataqueJugador == "Fuego" && ataqueEnemigo == "Planta"){
+        crearMensaje("Ganaste 🎉")
+    } else if(ataqueJugador == "Agua" && ataqueEnemigo == "Fuego"){
+        crearMensaje("Ganaste 🎉")     
+    } else if(ataqueJugador == "Planta" && ataqueEnemigo == "Agua"){
+        crearMensaje("Ganaste 🎉")
+    } else {
+        crearMensaje("Perdiste 🤣")
+    }
+}
+
+//Historial de las acciones
+function crearMensaje(resultado){
+    let seccionMensaje = document.getElementById('mensajes')
+
     let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu Moképon ataco con ' + ataqueJugador + ', el Moképon del enemigo uso ' + ataqueEnemigo +  '- Ganaste 🎉'
+    parrafo.innerHTML = 'Tu Moképon ataco con ' + ataqueJugador + ', el Moképon del enemigo uso ' + ataqueEnemigo + ' - ' + resultado
+
+    seccionMensaje.appendChild(parrafo)
 }
 
 function aleatorio(min, max){
