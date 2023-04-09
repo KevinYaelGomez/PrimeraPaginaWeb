@@ -3,31 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <script src="./js/mokepon.js"></script>
-    <title>Mopékom</title>
+    <link rel="stylesheet" href="./Style.css">
+    <title>Mopékon</title>
 </head>
 <body>
-    <h1>Mopékom 🔥🍃💧</h1>
      
     <!--Seleccion del Mopékom-->
     <section id="mascotas">
-        <h2>Elige tu Mopékom: </h2>
+        <h1>Mopékon 🔥🍃💧</h1>
 
-        <label for="llamarizard">Llamarizard 🔥</label>
+        <h2 id="subtitulo">Elige tu Mopékon: </h2>
+
+        <div class="tarjetas">
+            <label class="tarjetaMokepon" for="llamarizard">
+                <p>Llamarizard 🔥</p>
+                <img src="./css/mopekonFuego.png" alt="Llamarizard">
+            </label>
             <input type="radio" name="mopekom" id="llamarizard"/>
-
-        <label for="floresaur">Floresaur 🍃</label>
+    
+            <label class="tarjetaMokepon" for="floresaur">
+                <p>Floresaur 🍃</p>
+                <img src="./css/mopekonPlanta.png" alt="Floresaur">
+            </label>
             <input type="radio" name="mopekom" id="floresaur"/>
-
-        <label for="tortoise">Tortoise 💧</label>
+    
+            <label class="tarjetaMokepon" for="tortoise">
+                <p>Tortoise 💧</p>
+                <img src="./css/mopekonAgua.png" alt="Tortoise">
+            </label>
             <input type="radio" name="mopekom" id="tortoise"/>
-
-            <button id="boton-mascotas">Selecionar</button>
+        </div>
+        
+        <button id="boton-mascotas">Selecionar</button>
     </section>
     
     <!--Seleccion del ataque-->
     <section id="ataque">
-        <p>Tu Moképom <span id="mokeponJugador"></span> tiene <span id = "vidaJugador">3</span> vidas</p>
-        <p>El Moképom <span id="mokeponRival"></span> del rival tiene <span id = "vidaEnemigo">3</span> vidas</p>
+        <p>Tu Moképon <span id="mokeponJugador"></span> tiene <span id = "vidaJugador">3</span> vidas</p>
+        <p>El Moképon <span id="mokeponRival"></span> del rival tiene <span id = "vidaEnemigo">3</span> vidas</p>
 
         <h2>Elige tu ataque: </h2>
         <p>

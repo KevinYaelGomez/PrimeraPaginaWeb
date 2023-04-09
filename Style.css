@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Shantell+Sans:wght@600&display=swap');
+
+body{
+    font-family: 'Carter One', cursive;
+    background-color: black;
+}
+
+#mascotas{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1{
+    color: white;
+    padding: 5px;
+    width: 356px;
+    height: 60px;
+    background-color: #DC5F00;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 5px solid #CF0A0A;
+    border-radius: 10px;
+}
+
+#subtitulo{
+    font-size: 28px;
+    color: white;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 10px;
+}
+
+input{
+    display: none;
+}
+
+.tarjetaMokepon{
+    background-color: #DC5F00;
+    color: white;
+    padding: 10px;
+    width: 260px;
+    height: 136px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 3px solid #CF0A0A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boton-mascotas{
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #CF0A0A;
+    color: white;
+    font-family: 'Shantell Sans', cursive;
+    margin: 15px 0px 0px 0px;
+
+}
+
+.tarjetaMokepon img{
+    width: 120px;
+}
