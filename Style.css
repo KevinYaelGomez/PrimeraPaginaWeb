@@ -45,7 +45,7 @@ input{
     background-color: #DC5F00;
     color: white;
     padding: 10px;
-    width: 260px;
+    width: 265px;
     height: 136px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -69,4 +69,23 @@ input{
 
 .tarjetaMokepon img{
     width: 120px;
+}
+
+#ataque{
+    color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonesAtaque{
+    background-color: transparent;
+    border-radius: 15px;
+    border: 2px solid #CF0A0A;
+    color: white;
+    font-family: 'Shantell Sans', cursive;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 110px;
+    height: 36px;
+    margin: 10px;
 }

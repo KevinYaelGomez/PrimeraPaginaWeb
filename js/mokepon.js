@@ -29,7 +29,7 @@ function iniciarJuego(){
 function selecionarMascotaJugador() {
     //muestra la seccion de combate
     let seccionSelecionarAtaque = document.getElementById("ataque")
-    seccionSelecionarAtaque.style.display = 'block'
+    seccionSelecionarAtaque.style.display = 'flex'
     //oculta los botones de mascotas
     let seccionSelecionarMascota = document.getElementById("mascotas")
     seccionSelecionarMascota.style.display = 'none'
@@ -50,6 +50,7 @@ function selecionarMascotaJugador() {
             spanmokeponJugador.innerHTML = 'Torsoise'
     }   else {
             alert("Seleciona un Moképom")
+            location.reload()
     }
 
     selecionarMascotaEnemigo()

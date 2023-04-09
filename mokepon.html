@@ -17,19 +17,19 @@
         <div class="tarjetas">
             <label class="tarjetaMokepon" for="llamarizard">
                 <p>Llamarizard 🔥</p>
-                <img src="./css/mopekonFuego.png" alt="Llamarizard">
+                <img src="./assets/mopekonFuego.png" alt="Llamarizard">
             </label>
             <input type="radio" name="mopekom" id="llamarizard"/>
     
             <label class="tarjetaMokepon" for="floresaur">
                 <p>Floresaur 🍃</p>
-                <img src="./css/mopekonPlanta.png" alt="Floresaur">
+                <img src="./assets/mopekonPlanta.png" alt="Floresaur">
             </label>
             <input type="radio" name="mopekom" id="floresaur"/>
     
             <label class="tarjetaMokepon" for="tortoise">
                 <p>Tortoise 💧</p>
-                <img src="./css/mopekonAgua.png" alt="Tortoise">
+                <img src="./assets/mopekonAgua.png" alt="Tortoise">
             </label>
             <input type="radio" name="mopekom" id="tortoise"/>
         </div>
@@ -39,25 +39,27 @@
     
     <!--Seleccion del ataque-->
     <section id="ataque">
+        <h1>Mopékon 🔥🍃💧</h1>
+
+        <h2 class="subtitulo">Elige tu ataque: </h2>
+
         <p>Tu Moképon <span id="mokeponJugador"></span> tiene <span id = "vidaJugador">3</span> vidas</p>
         <p>El Moképon <span id="mokeponRival"></span> del rival tiene <span id = "vidaEnemigo">3</span> vidas</p>
 
-        <h2>Elige tu ataque: </h2>
-        <p>
-            <button id="boton-fuego">Fuego 🔥</button>
-            <button id="boton-agua">Agua 💧</button>
-            <button id="boton-planta">Planta 🍃</button>
-        </p>
-    </section>
+        <div>
+            <button id="boton-fuego" class="botonesAtaque">Fuego 🔥</button>
+            <button id="boton-agua" class="botonesAtaque">Agua 💧</button>
+            <button id="boton-planta" class="botonesAtaque">Planta 🍃</button>
+        </div>
 
-    <section id="mensajes">
+        <div>
+            <section id="reiniciar">
+                <button id="boton-reinicio">¿Volver a jugar?</button>
+            </section>
+        </div>
         
+        <section id="mensajes"></section>
     </section>
-
-    <section id="reiniciar">
-        <button id="boton-reinicio">¿Volver a jugar?</button>
-    </section>
-
 
 </body>
 </html>
