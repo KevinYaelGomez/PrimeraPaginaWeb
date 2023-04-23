@@ -143,21 +143,27 @@ function revisarVidas(){
 
 //Historial de las acciones
 function crearMensaje(resultado){
-    let seccionMensaje = document.getElementById('mensajes')
+    let seccionMensaje = document.getElementById('resultado')
+    let ataqueDelJugador = document.getElementById('ataqueDelJugador')
+    let ataqueDelEnemigo = document.getElementById('ataqueDelEnemigo')
 
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu Moképon ataco con ' + ataqueJugador + ', el Moképon del enemigo uso ' + ataqueEnemigo + ' - ' + resultado
+    let nuevoAtaqueDelJugador = document.createElement('p')
+    let nuevoAtaqueDelEnemigo = document.createElement('p')
 
-    seccionMensaje.appendChild(parrafo)
+    seccionMensaje.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = "Tu Mokepon ataco con " + ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = "El Mokepon del rival ataco con " + ataqueEnemigo
+
+   // let parrafo = document.createElement('p')
+   // parrafo.innerHTML = 'Tu Moképon ataco con ' + ataqueJugador + ', el Moképon del enemigo uso ' + ataqueEnemigo + ' - ' + resultado
+ 
+    ataqueDelJugador.appendChild(nuevoAtaqueDelJugador) 
+    ataqueDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
 function crearMensajeFinal(resultadoFinal){
-    let seccionMensaje = document.getElementById('mensajes')
-
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = resultadoFinal
-
-    seccionMensaje.appendChild(parrafo)
+    let seccionMensaje = document.getElementById('resultado')
+    seccionMensaje.innerHTML = resultadoFinal
 
     //Deshabilita los botones de combate cuando el usuario/maquina llege a 0
     let botonFuego = document.getElementById("boton-fuego")

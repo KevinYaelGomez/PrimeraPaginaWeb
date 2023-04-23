@@ -30,6 +30,8 @@ h1{
 #subtitulo{
     font-size: 28px;
     color: white;
+    margin: 15px 0px 15px 0px;
+    padding: 15px;
 }
 
 .tarjetas{
@@ -88,4 +90,30 @@ input{
     width: 110px;
     height: 36px;
     margin: 10px;
+}
+
+#boton-reinicio{
+    width: 180px;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 12px;
+    border: 3px solid #CF0A0A;
+    border-radius: 18px;
+    background: transparent;
+    color: white;
+    font-family: 'Shantell Sans';
+}
+
+#mensajes{
+    width: 330px;
+    background: #DC5F00;
+    height: 70px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
 }
