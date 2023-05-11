@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="./js/mokepon.js"></script>
     <link rel="stylesheet" href="./Style.css">
     <title>Mopékon</title>
 </head>
@@ -15,23 +14,24 @@
         <h2 id="subtitulo">Elige tu Mopékon: </h2>
 
         <div class="tarjetas">
+            <input type="radio" name="mopekom" id="llamarizard"/>
             <label class="tarjetaMokepon" for="llamarizard">
                 <p>Llamarizard 🔥</p>
                 <img src="./assets/mopekonFuego.png" alt="Llamarizard">
             </label>
-            <input type="radio" name="mopekom" id="llamarizard"/>
     
+            <input type="radio" name="mopekom" id="floresaur"/>
             <label class="tarjetaMokepon" for="floresaur">
                 <p>Floresaur 🍃</p>
                 <img src="./assets/mopekonPlanta.png" alt="Floresaur">
             </label>
-            <input type="radio" name="mopekom" id="floresaur"/>
-    
+            
+            <input type="radio" name="mopekom" id="tortoise"/>
             <label class="tarjetaMokepon" for="tortoise">
                 <p>Tortoise 💧</p>
                 <img src="./assets/mopekonAgua.png" alt="Tortoise">
             </label>
-            <input type="radio" name="mopekom" id="tortoise"/>
+            
         </div>
         
         <button id="boton-mascotas">Selecionar</button>
@@ -64,10 +64,8 @@
         
         <p id="ataqueDelJugador"></p>
         <p id="ataqueDelEnemigo"></p>
-        
-       
-        
-    </section>
 
+    </section>
+    <script src="./js/mokepon.js"></script>
 </body>
 </html>
